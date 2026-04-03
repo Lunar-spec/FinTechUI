@@ -39,9 +39,7 @@ const Home = () => {
       <div className="px-8 py-4 flex flex-col gap-6">
         <span className="text-xl font-semibold">Dashboard</span>
 
-        {/* Row 1 — Cards and pie */}
         <div className="flex flex-col md:flex-row md:justify-around gap-6">
-          {/* Cards — vertical stack */}
           <div className="flex flex-col gap-3">
             <span className="text-lg font-semibold">Overview</span>
             <div className="flex flex-col md:flex-row items-center h-full gap-4">
@@ -69,7 +67,6 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Pie chart */}
           <div className="flex flex-col px-6 py-4 shadow-lg rounded-2xl border">
             <div className="flex items-center justify-between mb-3">
               <span className="text-lg font-semibold">Analysis</span>
@@ -89,14 +86,12 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Row 2 — Trend chart */}
         <div className="px-6 py-4 shadow-lg rounded-2xl border">
           <BalanceTrendChart />
         </div>
 
         <Separator />
 
-        {/* Transaction table */}
         <TxnTable />
       </div>
     </div>

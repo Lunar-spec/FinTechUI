@@ -99,7 +99,6 @@ export default function DashPieChart({
 
   return (
     <div className="flex items-center gap-6 w-full max-w-sm">
-      {/* Chart */}
       <div className="shrink-0 w-40 h-40">
         <PieChart width={160} height={160}>
           <Pie
@@ -118,11 +117,11 @@ export default function DashPieChart({
         </PieChart>
       </div>
 
-      {/* Legend */}
       <div className="flex flex-col gap-2 min-w-0 flex-1">
         {data.map((entry, i) => {
           const color = entry.color ?? COLORS[i % COLORS.length];
-          const pct = total > 0 ? ((entry.value / total) * 100).toFixed(1) : "0";
+          const pct =
+            total > 0 ? ((entry.value / total) * 100).toFixed(1) : "0";
           return (
             <div key={entry.name} className="flex items-center gap-2 min-w-0">
               <span

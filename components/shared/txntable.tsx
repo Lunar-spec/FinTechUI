@@ -121,31 +121,6 @@ const TxnTable = () => {
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>
-        {/* <DropdownMenu>
-          <DropdownMenuTrigger
-            render={
-              <Button variant="outline" size="sm" className="rounded-md" />
-            }
-          >
-            {localCategory === "All" ? "All Categories" : localCategory}
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="max-h-64 overflow-y-auto">
-            <DropdownMenuLabel>Filter by Category</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            {CATEGORIES.map((cat) => (
-              <DropdownMenuItem
-                key={cat}
-                onClick={() => {
-                  setLocalCategory(cat);
-                  setPage(1);
-                }}
-                className={localCategory === cat ? "font-semibold" : ""}
-              >
-                {cat}
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuContent>
-        </DropdownMenu> */}
       </div>
 
       <div className="rounded-md border overflow-x-auto">

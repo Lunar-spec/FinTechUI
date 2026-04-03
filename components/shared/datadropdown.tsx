@@ -42,7 +42,6 @@ const DataDropDown = ({
 }: DataDropDownProps) => {
   return (
     <div className="flex items-center gap-2">
-      {/* Data type toggle */}
       <DropdownMenu>
         <DropdownMenuTrigger
           render={
@@ -63,7 +62,6 @@ const DataDropDown = ({
         </DropdownMenuContent>
       </DropdownMenu>
 
-      {/* Category filter */}
       <DropdownMenu>
         <DropdownMenuTrigger
           render={<Button variant="outline" className="rounded-md" />}
