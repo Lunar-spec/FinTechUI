@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { Poppins, Figtree } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/shared/themeprovider";
+import { RoleProvider } from "@/components/shared/roleprovider";
 
-const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
+const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" });
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -22,8 +24,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("h-full", "antialiased", poppins.variable, "font-sans", figtree.variable)}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html
+      suppressHydrationWarning
+      lang="en"
+      className={cn(
+        "h-full",
+        "antialiased",
+        poppins.variable,
+        "font-sans",
+        figtree.variable,
+      )}
+    >
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <RoleProvider>{children}</RoleProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
